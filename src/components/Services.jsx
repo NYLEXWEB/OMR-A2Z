@@ -149,7 +149,7 @@ export default function Services() {
 
                   {/* Direct WhatsApp Action Button */}
                   <a
-                    href={`https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20service.`}
+                    href={`https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20service.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xs text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md active:scale-98"
