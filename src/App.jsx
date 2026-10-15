@@ -1,122 +1,46 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React from 'react'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import About from './components/About'
+import Services from './components/Services'
+import Gallery from './components/Gallery'
+import WhyChooseUs from './components/WhyChooseUs'
+import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
+import { MessageCircle } from 'lucide-react'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#22201E] relative selection:bg-[#A52A32] selection:text-white">
+      {/* Refined Navigation Header */}
+      <Header />
 
-      <div className="ticks"></div>
+      {/* Main Content Sections */}
+      <main className="flex-grow">
+        <Hero />
+        <About />
+        <Services />
+        <Gallery />
+        <WhyChooseUs />
+        <ContactSection />
+      </main>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* Premium Minimal Footer */}
+      <Footer />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {/* Floating WhatsApp Quick Action Button */}
+      <a
+        href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20planning%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-[0_6px_20px_rgba(37,211,102,0.35)] hover:bg-[#20ba5a] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group"
+        aria-label="Direct WhatsApp Enquiry"
+      >
+        <MessageCircle className="w-5 h-5 fill-current" />
+        <span className="hidden sm:inline text-xs font-semibold tracking-wider uppercase">
+          WhatsApp Us
+        </span>
+      </a>
+    </div>
   )
 }
-
-export default App

@@ -1,12 +1,12 @@
 import React from 'react'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function About() {
   const scrollToContact = (e) => {
     e.preventDefault()
     const element = document.querySelector('#contact')
     if (element) {
-      const navOffset = 80
+      const navOffset = 90
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - navOffset
       window.scrollTo({
@@ -17,7 +17,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#EAE5DE]/80">
+    <section id="about" className="py-24 lg:py-32 bg-[#FFFFFF] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -54,21 +54,23 @@ export default function About() {
               </p>
             </div>
 
-            {/* Refined Pillar Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-[#EAE5DE] mb-8">
-              <div className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C6A46A] mt-2 flex-shrink-0" />
-                <div>
-                  <h4 className="font-serif text-sm font-semibold text-[#22201E]">Thoughtful Coordination</h4>
-                  <p className="text-xs text-[#77716A] mt-0.5">Calm, structured timelines and attentive on-site management.</p>
-                </div>
+            {/* Refined Two-Column Signature Hallmarks */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-[#EAE5DE] mb-8">
+              <div>
+                <span className="font-serif text-lg font-semibold text-[#22201E] block mb-1">
+                  Thoughtful Coordination
+                </span>
+                <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
+                  Structured timelines, calm orchestration, and watchful on-ground management from dawn to send-off.
+                </p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C6A46A] mt-2 flex-shrink-0" />
-                <div>
-                  <h4 className="font-serif text-sm font-semibold text-[#22201E]">Bespoke Presentation</h4>
-                  <p className="text-xs text-[#77716A] mt-0.5">Tailored floral stages, canopy draping, and ambient lighting.</p>
-                </div>
+              <div>
+                <span className="font-serif text-lg font-semibold text-[#22201E] block mb-1">
+                  Bespoke Presentation
+                </span>
+                <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
+                  Tailored floral stage architecture, marquee draping, crystal lighting, and authentic Malabar dining.
+                </p>
               </div>
             </div>
 
@@ -86,29 +88,42 @@ export default function About() {
 
           </div>
 
-          {/* Photograph Column */}
+          {/* Premium Editorial Layered Visual Showcase (Redesigned per user request) */}
           <div className="lg:col-span-6 order-1 lg:order-2">
-            <div className="relative">
-              {/* Subtle architectural frame */}
-              <div className="absolute -inset-3 sm:-inset-4 border border-[#C6A46A]/30 -z-10 rounded-sm" />
+            <div className="relative max-w-lg mx-auto lg:max-w-none">
               
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden rounded-sm bg-[#FAF8F5] shadow-[0_12px_32px_rgba(0,0,0,0.06)]">
+              {/* Main Feature Image */}
+              <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] aspect-[4/3] sm:aspect-[16/11]">
                 <img
                   src="/images/-5948478724158197594_119.jpg"
-                  alt="OMR A2Z Welcome Beverage Lounge & Professional Attendants"
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700 ease-out"
+                  alt="OMR A2Z Welcome Beverage Lounge & Uniformed Team"
+                  className="w-full h-full object-cover object-center hover:scale-103 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              </div>
+
+              {/* Overlapping Floating Secondary Image */}
+              <div className="hidden sm:block absolute -bottom-10 -left-8 w-48 lg:w-56 aspect-[3/4] rounded-md overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.18)] border-4 border-white">
+                <img
+                  src="/images/-5948577014484766555_119.jpg"
+                  alt="OMR A2Z Floral Canopy Entrance"
+                  className="w-full h-full object-cover object-center"
                   loading="lazy"
                 />
               </div>
 
-              {/* Photo Caption Badge */}
-              <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto bg-white/95 backdrop-blur-md px-4 py-2.5 border border-[#EAE5DE] shadow-sm rounded-sm">
-                <p className="text-[11px] uppercase tracking-wider font-semibold text-[#22201E]">
-                  Hospitality In Action
-                </p>
-                <p className="text-[11px] text-[#77716A]">
-                  Dedicated live counter presentation by OMR A2Z
-                </p>
+              {/* Floating Luxury Editorial Badge */}
+              <div className="absolute -top-5 right-4 sm:-top-6 sm:-right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-sm border border-[#C6A46A]/40 shadow-lg flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-[#A52A32]" />
+                <div className="text-left">
+                  <span className="text-[10px] uppercase tracking-widest text-[#C6A46A] font-bold block leading-none">
+                    Thalassery · Kannur
+                  </span>
+                  <span className="text-xs font-serif font-semibold text-[#22201E] mt-0.5 block leading-none">
+                    Authentic Malabar Hospitality
+                  </span>
+                </div>
               </div>
 
             </div>
