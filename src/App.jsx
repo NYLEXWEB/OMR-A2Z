@@ -4,15 +4,17 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
+import SocialSection from './components/SocialSection'
+import GoogleReviews from './components/GoogleReviews'
 import WhyChooseUs from './components/WhyChooseUs'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
-import { MessageCircle } from 'lucide-react'
+import { WhatsAppIcon, InstagramIcon } from './components/Icons'
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#22201E] relative selection:bg-[#A52A32] selection:text-white">
-      {/* Refined Navigation Header */}
+      {/* Refined Floating Header */}
       <Header />
 
       {/* Main Content Sections */}
@@ -21,6 +23,8 @@ export default function App() {
         <About />
         <Services />
         <Gallery />
+        <SocialSection />
+        <GoogleReviews />
         <WhyChooseUs />
         <ContactSection />
       </main>
@@ -28,19 +32,32 @@ export default function App() {
       {/* Premium Minimal Footer */}
       <Footer />
 
-      {/* Floating WhatsApp Quick Action Button */}
-      <a
-        href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20planning%20services."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-[0_6px_20px_rgba(37,211,102,0.35)] hover:bg-[#20ba5a] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group"
-        aria-label="Direct WhatsApp Enquiry"
-      >
-        <MessageCircle className="w-5 h-5 fill-current" />
-        <span className="hidden sm:inline text-xs font-semibold tracking-wider uppercase">
-          WhatsApp Us
-        </span>
-      </a>
+      {/* Floating Action Buttons (Stacked: Instagram on top, WhatsApp on bottom, NO text per user request) */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+        {/* Instagram Floating Icon */}
+        <a
+          href="https://www.instagram.com/omr.a2z.events/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(225,48,108,0.35)] hover:scale-110 active:scale-95 transition-all duration-300"
+          aria-label="Follow OMR A2Z on Instagram"
+          title="Instagram @omr.a2z.events"
+        >
+          <InstagramIcon className="w-6 h-6" />
+        </a>
+
+        {/* WhatsApp Floating Icon */}
+        <a
+          href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20planning%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300"
+          aria-label="Direct WhatsApp Enquiry"
+          title="Chat on WhatsApp"
+        >
+          <WhatsAppIcon className="w-6 h-6 fill-current" />
+        </a>
+      </div>
     </div>
   )
 }

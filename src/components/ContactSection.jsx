@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Send, MessageCircle, Check, AlertCircle } from 'lucide-react'
 import { InstagramIcon } from './Icons'
 
@@ -101,11 +102,17 @@ _Sent via omra2z.com inquiry form_`
   }
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-[#FFFFFF]">
+    <section id="contact" className="py-24 lg:py-32 bg-[#FFFFFF] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-16"
+        >
           <div className="flex items-center gap-3 mb-3">
             <span className="w-8 h-[1px] bg-[#A52A32]" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A52A32]">
@@ -120,12 +127,18 @@ _Sent via omra2z.com inquiry form_`
           <p className="text-sm sm:text-base text-[#77716A] leading-relaxed">
             Tell us a little about your celebration and the experience you have in mind. We respond promptly with thoughtful advice, availability, and transparent options.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Enquiry Form */}
-          <div className="lg:col-span-7 bg-[#FAF8F5] border border-[#EAE5DE] p-6 sm:p-10 shadow-sm rounded-xs">
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 bg-[#FAF8F5] border border-[#EAE5DE] p-6 sm:p-10 shadow-sm rounded-xs"
+          >
             <div className="mb-6 pb-4 border-b border-[#EAE5DE]">
               <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#22201E]">
                 Event Consultation Request
@@ -328,10 +341,16 @@ _Sent via omra2z.com inquiry form_`
               </form>
             )}
 
-          </div>
+          </motion.div>
 
           {/* Business Information & Direct Channels */}
-          <div className="lg:col-span-5 flex flex-col space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 flex flex-col space-y-8"
+          >
             
             <div className="bg-[#FAF8F5] border border-[#EAE5DE] p-6 sm:p-8">
               <h3 className="font-serif text-xl font-semibold text-[#22201E] mb-6">
@@ -451,7 +470,7 @@ _Sent via omra2z.com inquiry form_`
               </p>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
 export default function About() {
@@ -22,9 +23,14 @@ export default function About() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Editorial Content Column */}
-          <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-            
+          {/* Editorial Content Column with Scroll Reveal */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1"
+          >
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-4">
               <span className="w-8 h-[1px] bg-[#A52A32]" />
@@ -56,16 +62,16 @@ export default function About() {
 
             {/* Refined Two-Column Signature Hallmarks */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-[#EAE5DE] mb-8">
-              <div>
-                <span className="font-serif text-lg font-semibold text-[#22201E] block mb-1">
+              <div className="group">
+                <span className="font-serif text-lg font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors block mb-1">
                   Thoughtful Coordination
                 </span>
                 <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
                   Structured timelines, calm orchestration, and watchful on-ground management from dawn to send-off.
                 </p>
               </div>
-              <div>
-                <span className="font-serif text-lg font-semibold text-[#22201E] block mb-1">
+              <div className="group">
+                <span className="font-serif text-lg font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors block mb-1">
                   Bespoke Presentation
                 </span>
                 <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
@@ -86,36 +92,54 @@ export default function About() {
               </a>
             </div>
 
-          </div>
+          </motion.div>
 
-          {/* Premium Editorial Layered Visual Showcase (Redesigned per user request) */}
-          <div className="lg:col-span-6 order-1 lg:order-2">
+          {/* Premium Editorial Layered Visual Showcase with Reveal Animation */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-6 order-1 lg:order-2"
+          >
             <div className="relative max-w-lg mx-auto lg:max-w-none">
               
               {/* Main Feature Image */}
-              <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] aspect-[4/3] sm:aspect-[16/11] group">
                 <img
                   src="/images/-5948478724158197594_119.jpg"
                   alt="OMR A2Z Welcome Beverage Lounge & Uniformed Team"
-                  className="w-full h-full object-cover object-center hover:scale-103 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Overlapping Floating Secondary Image */}
-              <div className="hidden sm:block absolute -bottom-10 -left-8 w-48 lg:w-56 aspect-[3/4] rounded-md overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.18)] border-4 border-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="hidden sm:block absolute -bottom-10 -left-8 w-48 lg:w-56 aspect-[3/4] rounded-md overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.18)] border-4 border-white group"
+              >
                 <img
                   src="/images/-5948577014484766555_119.jpg"
                   alt="OMR A2Z Floral Canopy Entrance"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
 
               {/* Floating Luxury Editorial Badge */}
-              <div className="absolute -top-5 right-4 sm:-top-6 sm:-right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-sm border border-[#C6A46A]/40 shadow-lg flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-full bg-[#A52A32]" />
+              <motion.div
+                initial={{ opacity: 0, y: -15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="absolute -top-5 right-4 sm:-top-6 sm:-right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-sm border border-[#C6A46A]/40 shadow-lg flex items-center gap-2.5"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#A52A32] animate-pulse" />
                 <div className="text-left">
                   <span className="text-[10px] uppercase tracking-widest text-[#C6A46A] font-bold block leading-none">
                     Thalassery · Kannur
@@ -124,10 +148,10 @@ export default function About() {
                     Authentic Malabar Hospitality
                   </span>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

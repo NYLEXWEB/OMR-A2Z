@@ -1,6 +1,6 @@
 import React from 'react'
-import { Phone, Mail, MessageCircle, MapPin, ArrowUp } from 'lucide-react'
-import { InstagramIcon } from './Icons'
+import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
+import { InstagramIcon, WhatsAppIcon } from './Icons'
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -14,7 +14,7 @@ export default function Footer() {
     e.preventDefault()
     const element = document.querySelector(href)
     if (element) {
-      const navOffset = 80
+      const navOffset = 90
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - navOffset
       window.scrollTo({
@@ -65,7 +65,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] hover:text-white flex items-center justify-center text-white/90 transition-all duration-200"
                 aria-label="WhatsApp OMR A2Z"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
               </a>
               <a
                 href="https://www.instagram.com/omr.a2z.events/"
@@ -116,12 +116,17 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#gallery" onClick={(e) => handleNavClick(e, '#gallery')} className="hover:text-white transition-colors">
-                  Featured Work
+                  Celebration Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" onClick={(e) => handleNavClick(e, '#reviews')} className="hover:text-white transition-colors">
+                  Google Reviews
                 </a>
               </li>
               <li>
                 <a href="#why-us" onClick={(e) => handleNavClick(e, '#why-us')} className="hover:text-white transition-colors">
-                  Guiding Principles
+                  Guiding Philosophy
                 </a>
               </li>
               <li>
@@ -149,7 +154,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] flex-shrink-0 fill-current" />
                 <a href="https://wa.me/919562731173" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   +91 95627 31173 (WhatsApp)
                 </a>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { WhatsAppIcon } from './Icons'
 
 export default function Services() {
   const services = [
@@ -65,26 +66,18 @@ export default function Services() {
     },
   ]
 
-  const scrollToContact = (e) => {
-    e.preventDefault()
-    const element = document.querySelector('#contact')
-    if (element) {
-      const navOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - navOffset
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
   return (
-    <section id="services" className="py-20 lg:py-28 bg-[#FAF8F5]">
+    <section id="services" className="py-24 lg:py-32 bg-[#FAF8F5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#EAE5DE]">
+        {/* Section Header with Scroll Reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#EAE5DE]"
+        >
           <div>
             <div className="flex items-center gap-3 mb-3">
               <span className="w-8 h-[1px] bg-[#A52A32]" />
@@ -100,14 +93,19 @@ export default function Services() {
           <p className="text-sm sm:text-base text-[#77716A] max-w-md mt-4 md:mt-0 font-normal leading-relaxed">
             From complete wedding decor and marquee architecture to renowned Malabar catering, we take care of every facet of your event.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Editorial Services Grid */}
+        {/* Editorial Services Grid with Staggered Scroll Animation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {services.map((service) => (
-            <div
+          {services.map((service, index) => (
+            <motion.div
               key={service.number}
-              className="group flex flex-col bg-white border border-[#EAE5DE] hover:border-[#C6A46A]/60 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.12 }}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+              className="group flex flex-col bg-white border border-[#EAE5DE] hover:border-[#C6A46A]/60 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] rounded-sm overflow-hidden"
             >
               {/* Service Photograph */}
               <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF8F5]">
@@ -138,7 +136,7 @@ export default function Services() {
                 </div>
 
                 <div className="pt-4 border-t border-[#EAE5DE]/60">
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {service.features.map((feat) => (
                       <span
                         key={feat}
@@ -149,22 +147,30 @@ export default function Services() {
                     ))}
                   </div>
 
+                  {/* Direct WhatsApp Action Button */}
                   <a
-                    href="#contact"
-                    onClick={scrollToContact}
-                    className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors"
+                    href={`https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}%20service.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xs text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md active:scale-98"
                   >
-                    <span>Enquire for this service</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#C6A46A] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
+                    <span>Enquire on WhatsApp</span>
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Tailored Consultation Callout */}
-        <div className="mt-14 p-6 sm:p-8 bg-white border border-[#EAE5DE] flex flex-col sm:flex-row items-center justify-between gap-6">
+        {/* Tailored Consultation Callout - Button changed to Brand Red (#A52A32 / btn-primary) per user request */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-14 p-6 sm:p-8 bg-white border border-[#EAE5DE] flex flex-col sm:flex-row items-center justify-between gap-6 rounded-sm shadow-xs hover:shadow-md transition-shadow duration-300"
+        >
           <div>
             <h4 className="font-serif text-xl font-semibold text-[#22201E]">Looking for a Custom Event Package?</h4>
             <p className="text-xs sm:text-sm text-[#77716A] mt-1">
@@ -175,11 +181,11 @@ export default function Services() {
             href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20discuss%20a%20customized%20event%20package%20for%20my%20function."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-xs uppercase tracking-wider px-6 py-3 whitespace-nowrap flex-shrink-0"
+            className="btn-primary text-xs uppercase tracking-wider px-7 py-3.5 whitespace-nowrap flex-shrink-0 hover:scale-102 active:scale-98 transition-all font-semibold"
           >
             Consult on WhatsApp
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>
