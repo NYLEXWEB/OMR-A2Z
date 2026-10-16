@@ -1,17 +1,19 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Gallery from './components/Gallery'
-import SocialSection from './components/SocialSection'
-import GoogleReviews from './components/GoogleReviews'
-import WhyChooseUs from './components/WhyChooseUs'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
-import { WhatsAppIcon, InstagramIcon } from './components/Icons'
+'use client'
 
-export default function App() {
+import Header from '../components/Header'
+import Hero from '../components/Hero'
+import About from '../components/About'
+import Services from '../components/Services'
+import Gallery from '../components/Gallery'
+import VideoSection from '../components/VideoSection'
+import SocialSection from '../components/SocialSection'
+import GoogleReviews from '../components/GoogleReviews'
+import WhyChooseUs from '../components/WhyChooseUs'
+import ContactSection from '../components/ContactSection'
+import Footer from '../components/Footer'
+import { WhatsAppIcon, InstagramIcon } from '../components/Icons'
+
+export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#22201E] relative selection:bg-[#A52A32] selection:text-white">
       {/* Refined Floating Header */}
@@ -23,6 +25,7 @@ export default function App() {
         <About />
         <Services />
         <Gallery />
+        <VideoSection />
         <SocialSection />
         <GoogleReviews />
         <WhyChooseUs />
@@ -48,12 +51,12 @@ export default function App() {
 
         {/* WhatsApp Floating Icon */}
         <a
-          href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20planning%20services."
+          href="https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20planning%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300"
           aria-label="Direct WhatsApp Enquiry"
-          title="Chat on WhatsApp"
+          title="Chat on WhatsApp (+91 90747 96765)"
         >
           <WhatsAppIcon className="w-6 h-6 fill-current" />
         </a>

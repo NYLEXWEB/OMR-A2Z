@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
 import { InstagramIcon, WhatsAppIcon } from './Icons'
@@ -59,7 +61,7 @@ export default function Footer() {
 
             <div className="pt-2 flex items-center gap-3">
               <a
-                href="https://wa.me/919562731173"
+                href="https://wa.me/919074796765"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] hover:text-white flex items-center justify-center text-white/90 transition-all duration-200"
@@ -77,7 +79,7 @@ export default function Footer() {
                 <InstagramIcon className="w-4 h-4" />
               </a>
               <a
-                href="tel:+919562731173"
+                href="tel:+919074796765"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#A52A32] hover:text-white flex items-center justify-center text-white/90 transition-all duration-200"
                 aria-label="Call OMR A2Z"
               >
@@ -126,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#why-us" onClick={(e) => handleNavClick(e, '#why-us')} className="hover:text-white transition-colors">
-                  Guiding Philosophy
+                  Why Choose Us
                 </a>
               </li>
               <li>
@@ -149,14 +151,20 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C6A46A] flex-shrink-0" />
-                <a href="tel:+919562731173" className="hover:text-white transition-colors">
-                  095627 31173
-                </a>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <a href="tel:+919074796765" className="hover:text-white transition-colors">
+                    +91 90747 96765
+                  </a>
+                  <span className="text-white/40">/</span>
+                  <a href="tel:+919562731173" className="hover:text-white transition-colors">
+                    +91 95627 31173
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <WhatsAppIcon className="w-4 h-4 text-[#25D366] flex-shrink-0 fill-current" />
-                <a href="https://wa.me/919562731173" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  +91 95627 31173 (WhatsApp)
+                <a href="https://wa.me/919074796765" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  +91 90747 96765 (WhatsApp)
                 </a>
               </div>
               <div className="flex items-center gap-2.5">

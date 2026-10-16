@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Star, CheckCircle } from 'lucide-react'
+import { Star, CheckCircle, ArrowUpRight } from 'lucide-react'
 import { GoogleIcon } from './Icons'
 
 export default function GoogleReviews() {
@@ -114,14 +116,17 @@ export default function GoogleReviews() {
             </div>
           </div>
 
-          {/* Right: Write Review Button */}
+          {/* Right: Write Review Button (Capsule pill with disc) */}
           <a
-            href="https://www.google.com/search?q=OMR+A2Z+Wedding+and+Event+Planners+Thalassery#lrd=0x0:0x0,3,,,"
+            href="https://www.google.com/search?kgmid=%2Fg%2F11vzy34m5s&hl=en-IN&q=OMR%20A2Z%20EVENTS&shem=epsd1%2Cesd2e%2Cltae%2Crimspwouoe%2Csdpie&shndl=30&source=sh%2Fx%2Floc%2Fosrp%2Fm5%2F1&kgs=15fa3dcda84cca48"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-xs uppercase tracking-wider font-semibold py-2.5 px-5 bg-white hover:bg-neutral-50 whitespace-nowrap hover:scale-102 transition-all shadow-xs"
+            className="btn-secondary group"
           >
-            Read All Reviews on Google
+            <span>Read All Reviews on Google</span>
+            <span className="btn-disc">
+              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
           </a>
         </motion.div>
 

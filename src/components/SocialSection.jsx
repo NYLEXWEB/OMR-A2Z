@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
@@ -12,7 +14,7 @@ export default function SocialSection() {
       actionText: 'Find on Google Maps',
       description: 'Locate our headquarters, view verified directions, and check regional service areas across Kannur.',
       icon: GoogleIcon,
-      href: 'https://www.google.com/search?q=OMR+A2Z+Wedding+and+Event+Planners+Thalassery',
+      href: 'https://www.google.com/search?kgmid=%2Fg%2F11vzy34m5s&hl=en-IN&q=OMR%20A2Z%20EVENTS&shem=epsd1%2Cesd2e%2Cltae%2Crimspwouoe%2Csdpie&shndl=30&source=sh%2Fx%2Floc%2Fosrp%2Fm5%2F1&kgs=15fa3dcda84cca48',
       badge: 'Official Listing',
       iconContainer: 'bg-white border border-[#EAE5DE] shadow-xs',
       badgeColor: 'bg-[#4285F4]/10 text-[#4285F4] border-[#4285F4]/30',
@@ -53,11 +55,11 @@ export default function SocialSection() {
     {
       id: 'whatsapp',
       name: 'WhatsApp Business',
-      handle: '+91 95627 31173',
+      handle: '+91 90747 96765',
       actionText: 'Chat on WhatsApp',
       description: 'Direct priority channel to discuss your event date, customize wedding menus, and receive instant estimates.',
       icon: WhatsAppIcon,
-      href: 'https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20chat%20about%20an%20event.',
+      href: 'https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20chat%20about%20an%20event.',
       badge: 'Instant Support',
       iconContainer: 'bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)]',
       badgeColor: 'bg-[#25D366]/10 text-[#128C7E] border-[#25D366]/30',
@@ -142,13 +144,15 @@ export default function SocialSection() {
                   </p>
                 </div>
 
-                {/* Action Link / Button with Authentic Brand Background */}
+                {/* Action Link / Button with Authentic Brand Capsule Design */}
                 <div className="pt-4 border-t border-[#EAE5DE]/60">
                   <div
-                    className={`w-full py-2.5 px-3 rounded-xs text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-xs group-hover:shadow-md ${platform.btnBg}`}
+                    className={`w-full py-1.5 pl-4 pr-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center justify-between transition-all duration-300 shadow-sm group-hover:shadow-md ${platform.btnBg}`}
                   >
                     <span>{platform.actionText}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#22201E]">
+                      <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
                   </div>
                 </div>
               </motion.a>

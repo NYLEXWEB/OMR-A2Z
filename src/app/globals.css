@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand: #A52A32;
+    --color-brand-dark: #8C2229;
+    --color-champagne: #C6A46A;
+    --color-champagne-light: #EFE7DA;
+    --color-ivory: #FAF8F5;
+    --color-surface: #F5F2EC;
+    --color-charcoal: #22201E;
+    --color-muted: #77716A;
+    --color-border: #EAE5DE;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-charcoal);
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D1C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A46A;
+}
+
+/* Luxury Bespoke Capsule Button System - OMR A2Z */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, #9C222A 0%, #7C151B 100%);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.45rem 0.42rem 1.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(198, 164, 106, 0.5);
+  box-shadow: 0 4px 18px rgba(124, 21, 27, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary .btn-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #7C151B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #A82830 0%, #87181F 100%);
+  border-color: rgba(198, 164, 106, 0.9);
+  box-shadow: 0 8px 28px rgba(124, 21, 27, 0.35), 0 0 0 2px rgba(198, 164, 106, 0.3);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+.btn-primary:hover .btn-disc {
+  transform: scale(1.08) translateX(2px);
+  background-color: #FAF8F5;
+  color: #A82830;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  background-color: #FFFFFF;
+  color: #22201E;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.45rem 0.42rem 1.45rem;
+  border-radius: 9999px;
+  border: 1px solid #D8D2C9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secondary .btn-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #FAF8F5;
+  color: #22201E;
+  border: 1px solid #EAE5DE;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.btn-secondary:hover {
+  background-color: #FAF8F5;
+  border-color: #7C151B;
+  color: #7C151B;
+  box-shadow: 0 6px 22px rgba(124, 21, 27, 0.12);
+  transform: translateY(-2px);
+}
+.btn-secondary:hover .btn-disc {
+  background-color: #7C151B;
+  color: #FFFFFF;
+  border-color: #7C151B;
+  transform: scale(1.08) translateX(2px);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-hero-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.45rem 0.42rem 1.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-hero-secondary .btn-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.btn-hero-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+.btn-hero-secondary:hover .btn-disc {
+  background-color: #FFFFFF;
+  color: #22201E;
+  transform: scale(1.08) translateX(2px);
+}
+.btn-hero-secondary:active {
+  transform: translateY(0);
+}
+
+/* Unique Pill WhatsApp Concierge Button (For Services Cards) */
+.btn-whatsapp-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.35rem 0.45rem 0.35rem 1.25rem;
+  background: #FAF8F5;
+  color: #22201E;
+  border: 1px solid #E2DCD5;
+  border-radius: 9999px;
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-whatsapp-pill .wa-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.btn-whatsapp-pill:hover {
+  background: #FFFFFF;
+  border-color: #25D366;
+  color: #0E6B39;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.18);
+  transform: translateY(-2px);
+}
+.btn-whatsapp-pill:hover .wa-disc {
+  transform: scale(1.1) rotate(8deg);
+  background: #20ba5a;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+}
+
+/* Dual-Row Smooth Marquee */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 36s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 36s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}

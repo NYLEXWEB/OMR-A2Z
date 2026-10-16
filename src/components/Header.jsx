@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
 
@@ -18,6 +20,7 @@ export default function Header() {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Gallery', href: '#gallery' },
+    { name: 'Reels', href: '#videos' },
     { name: 'Why Us', href: '#why-us' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#contact' },
@@ -90,15 +93,17 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop Primary CTA (Phone number removed per user request) */}
+          {/* Desktop Primary CTA (Capsule Pill with action disc) */}
           <div className="hidden sm:flex items-center gap-3">
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="btn-primary text-xs uppercase font-medium tracking-wider px-5 py-2.5 rounded-sm"
+              className="btn-primary group"
             >
               <span>Plan Your Event</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span className="btn-disc">
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
             </a>
           </div>
 
@@ -107,7 +112,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#22201E] hover:text-[#A52A32] hover:bg-[#FAF8F5] rounded-md transition-colors"
+              className="p-2 text-[#22201E] hover:text-[#A52A32] hover:bg-[#FAF8F5] rounded-full transition-colors"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -138,9 +143,12 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="btn-primary w-full text-center text-xs uppercase tracking-wider py-3"
+                className="btn-primary w-full group"
               >
-                Plan Your Event
+                <span>Plan Your Event</span>
+                <span className="btn-disc">
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </span>
               </a>
             </div>
           </div>

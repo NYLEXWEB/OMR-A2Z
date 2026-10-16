@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Calendar, ArrowUpRight, MapPin, ChevronDown } from 'lucide-react'
@@ -71,29 +73,33 @@ export default function Hero() {
           From unforgettable weddings to thoughtfully curated celebrations, OMR A2Z brings every detail together with care and precision.
         </motion.p>
 
-        {/* Primary and Secondary CTA Buttons */}
+        {/* Primary and Secondary CTA Buttons (Capsule pill with action discs) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto"
         >
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, '#contact')}
-            className="btn-primary w-full sm:w-auto text-xs sm:text-sm uppercase tracking-wider px-7 py-3.5 font-semibold bg-[#A52A32] hover:bg-[#8C2229] transition-all hover:scale-102 active:scale-98"
+            className="btn-primary w-full sm:w-auto group"
           >
-            <Calendar className="w-4 h-4 text-[#C6A46A]" />
             <span>Plan Your Event</span>
+            <span className="btn-disc">
+              <Calendar className="w-3.5 h-3.5" />
+            </span>
           </a>
 
           <a
             href="#gallery"
             onClick={(e) => scrollToSection(e, '#gallery')}
-            className="btn-hero-secondary w-full sm:w-auto text-xs sm:text-sm uppercase tracking-wider px-7 py-3.5 font-medium hover:scale-102 active:scale-98"
+            className="btn-hero-secondary w-full sm:w-auto group"
           >
             <span>Explore Our Work</span>
-            <ArrowUpRight className="w-4 h-4 text-[#FAF8F5]" />
+            <span className="btn-disc">
+              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
           </a>
         </motion.div>
 

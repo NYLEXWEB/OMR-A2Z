@@ -1,7 +1,9 @@
+'use client'
+
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Send, MessageCircle, Check, AlertCircle } from 'lucide-react'
-import { InstagramIcon } from './Icons'
+import { InstagramIcon, WhatsAppIcon } from './Icons'
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,11 +22,13 @@ export default function ContactSection() {
 
   const eventOptions = [
     'Wedding & Reception',
-    'Stage Decor & Marquee',
-    'Catering & Live Counters',
-    'Engagement Function',
-    'Private Milestone / Housewarming',
-    'Corporate Event'
+    'Catering & Food Services',
+    'Pandhal & Marquee Canopy',
+    'Stage & Stage Decoration',
+    'Karaoke & Live Ganamela',
+    'Mailanji / Mehendi Night',
+    'Oppana, Daffmuttu & Kolkkali',
+    'Customized Full Event Package'
   ]
 
   const locationOptions = [
@@ -90,7 +94,7 @@ _Sent via omra2z.com inquiry form_`
 
     // Open WhatsApp directly with the structured message
     const encoded = encodeURIComponent(messageText)
-    const whatsappUrl = `https://wa.me/919562731173?text=${encoded}`
+    const whatsappUrl = `https://wa.me/919074796765?text=${encoded}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
@@ -157,7 +161,7 @@ _Sent via omra2z.com inquiry form_`
                   </h4>
                 </div>
                 <p className="text-xs sm:text-sm text-[#59534B] leading-relaxed">
-                  Your enquiry has been prepared. If your browser didn't open WhatsApp automatically, click the button below to send your details directly to <strong>+91 95627 31173</strong>:
+                  Your enquiry has been prepared. If your browser didn't open WhatsApp automatically, click the button below to send your details directly to <strong>+91 90747 96765</strong>:
                 </p>
 
                 <div className="p-4 bg-[#FAF8F5] border border-[#EAE5DE] text-xs font-mono text-[#59534B] whitespace-pre-wrap rounded-xs max-h-48 overflow-y-auto">
@@ -166,20 +170,25 @@ _Sent via omra2z.com inquiry form_`
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <a
-                    href={`https://wa.me/919562731173?text=${encodeURIComponent(formattedMessage)}`}
+                    href={`https://wa.me/919074796765?text=${encodeURIComponent(formattedMessage)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary text-xs uppercase tracking-wider py-3 px-5 text-center bg-[#25D366] hover:bg-[#20ba5a]"
+                    className="pl-5 pr-2 py-2 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold uppercase tracking-wider inline-flex items-center justify-between gap-3 shadow-md transition-all group"
                   >
-                    <MessageCircle className="w-4 h-4 fill-white" />
                     <span>Open in WhatsApp</span>
+                    <span className="w-7 h-7 rounded-full bg-white text-[#25D366] flex items-center justify-center transition-transform group-hover:scale-110">
+                      <WhatsAppIcon className="w-4 h-4 fill-current" />
+                    </span>
                   </a>
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="btn-secondary text-xs uppercase tracking-wider py-3 px-5"
+                    className="btn-secondary group"
                   >
-                    Edit Information
+                    <span>Edit Information</span>
+                    <span className="btn-disc">
+                      <Check className="w-3.5 h-3.5" />
+                    </span>
                   </button>
                 </div>
               </div>
@@ -324,14 +333,16 @@ _Sent via omra2z.com inquiry form_`
                   />
                 </div>
 
-                {/* Submit Action */}
+                {/* Submit Action (Unique capsule pill with action disc) */}
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="btn-primary w-full py-4 text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2"
+                    className="btn-primary w-full group py-3.5 pl-6 pr-3.5"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#C6A46A]" />
                     <span>Send Enquiry via WhatsApp</span>
+                    <span className="btn-disc">
+                      <WhatsAppIcon className="w-4 h-4 fill-current text-[#7C151B]" />
+                    </span>
                   </button>
                   <p className="text-[11px] text-center text-[#77716A] mt-2.5">
                     No spam. Your details will be formatted and opened directly in WhatsApp with OMR A2Z.
@@ -368,13 +379,22 @@ _Sent via omra2z.com inquiry form_`
                     <span className="text-[11px] uppercase tracking-wider text-[#77716A] font-semibold block">
                       Call Us Directly
                     </span>
-                    <a
-                      href="tel:+919562731173"
-                      className="text-base font-semibold text-[#22201E] hover:text-[#A52A32] transition-colors mt-0.5 inline-block"
-                    >
-                      095627 31173
-                    </a>
-                    <p className="text-xs text-[#77716A] mt-0.5">Available for calls and inquiries</p>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+                      <a
+                        href="tel:+919074796765"
+                        className="text-base font-semibold text-[#22201E] hover:text-[#A52A32] transition-colors inline-block"
+                      >
+                        +91 90747 96765
+                      </a>
+                      <span className="text-[#A7A19A] text-sm">/</span>
+                      <a
+                        href="tel:+919562731173"
+                        className="text-base font-semibold text-[#22201E] hover:text-[#A52A32] transition-colors inline-block"
+                      >
+                        +91 95627 31173
+                      </a>
+                    </div>
+                    <p className="text-xs text-[#77716A] mt-0.5">Available for direct calls and inquiries</p>
                   </div>
                 </div>
 
@@ -388,12 +408,12 @@ _Sent via omra2z.com inquiry form_`
                       Official WhatsApp
                     </span>
                     <a
-                      href="https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20event%20planning%20and%20catering%20services."
+                      href="https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20event%20planning%20and%20catering%20services."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base font-semibold text-[#22201E] hover:text-[#25D366] transition-colors mt-0.5 inline-block"
                     >
-                      +91 95627 31173
+                      +91 90747 96765
                     </a>
                     <p className="text-xs text-[#77716A] mt-0.5">Instant messaging & quotation chat</p>
                   </div>

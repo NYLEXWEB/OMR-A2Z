@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { X, ZoomIn } from 'lucide-react'
 import { WhatsAppIcon } from './Icons'
@@ -254,13 +256,15 @@ export default function Gallery() {
               </div>
 
               <a
-                href={`https://wa.me/919562731173?text=Hi%20OMR%20A2Z,%20I%20am%20interested%20in%20a%20setup%20like:%20${encodeURIComponent(selectedImage.title)}`}
+                href={`https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20am%20interested%20in%20a%20setup%20like:%20${encodeURIComponent(selectedImage.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs uppercase tracking-wider px-5 py-2.5 rounded-xs font-semibold whitespace-nowrap self-start sm:self-auto transition-all shadow-sm"
+                className="pl-5 pr-1.5 py-1.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold uppercase tracking-wider inline-flex items-center gap-3 shadow-md hover:shadow-lg transition-all duration-300 group whitespace-nowrap self-start sm:self-auto"
               >
-                <WhatsAppIcon className="w-4 h-4" />
                 <span>Inquire on WhatsApp</span>
+                <span className="w-7 h-7 rounded-full bg-white text-[#25D366] flex items-center justify-center shadow-xs transition-transform group-hover:scale-110">
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
+                </span>
               </a>
             </div>
 
