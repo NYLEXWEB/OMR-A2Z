@@ -101,7 +101,7 @@ export default function GoogleReviews() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#22201E]">
+                <span className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#22201E]">
                   4.9
                 </span>
                 <div className="flex items-center gap-1 text-[#FBBC05]">

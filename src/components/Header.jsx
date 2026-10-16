@@ -70,7 +70,7 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-[#22201E] group-hover:text-[#A52A32] transition-colors leading-tight">
+              <span className="text-base sm:text-lg font-semibold tracking-[-0.02em] text-[#22201E] group-hover:text-[#A52A32] transition-colors leading-tight">
                 OMR A2Z
               </span>
               <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#77716A] font-medium leading-none mt-0.5">

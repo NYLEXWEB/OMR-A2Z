@@ -17,24 +17,25 @@ export default function Services() {
   const services = [
     {
       number: '01',
+      totalCount: '06',
       category: 'Main Food & Banqueting',
       title: 'Catering & Grand Feasts',
       tagline: 'Authentic Thalassery Dum Biryani & Royal Buffets',
       description:
-        'Food is the heart of every Malabar celebration. We craft royal Thalassery Dum Biryani, traditional sadya, multi-cuisine banquets, live hot food stations, traditional refreshment stalls, and welcome drinks with trained, uniformed service staff.',
+        'Food is the heart of every Malabar celebration. We craft royal Thalassery Dum Biryani, traditional sadya, multi-cuisine banquets, live hot food stations, and traditional refreshment stalls with trained, uniformed service staff.',
       image: '/images/-5948478724158197594_119.jpg',
       alt: 'OMR A2Z Catering & Food Lounge Presentation',
       icon: UtensilsCrossed,
       features: [
         'Thalassery Dum Biryani & Sadya',
-        'Live Welcome Counters & Beverages',
-        'Uniformed Hospitality Crew',
-        'Full Hygiene & Presentation'
+        'Live Welcome Counters & Drinks',
+        'Uniformed Hospitality Crew'
       ],
       whatsappTopic: 'Catering & Food Services'
     },
     {
       number: '02',
+      totalCount: '06',
       category: 'Structural Architecture',
       title: 'Pandhal & Marquee Canopies',
       tagline: 'Heavy-Duty Waterproof Structures & Drapes',
@@ -46,13 +47,13 @@ export default function Services() {
       features: [
         'Waterproof Pandhal Structures',
         'Radial Ceiling Ribbon Drapes',
-        'German Aluminium Marquees',
-        'Weather-Tested Coastal Safety'
+        'German Aluminium Marquees'
       ],
       whatsappTopic: 'Pandhal & Marquee Canopy Setup'
     },
     {
       number: '03',
+      totalCount: '06',
       category: 'Stage & Ambience Decor',
       title: 'Stage & Stage Decoration',
       tagline: 'Bespoke Stages, Fresh Flowers & Lighting',
@@ -64,13 +65,13 @@ export default function Services() {
       features: [
         'Custom Wedding Stage Architecture',
         'Exotic Fresh Flower Backdrops',
-        'Crystal Chandeliers & Fairy Lights',
-        'Photogenic Entrance Arches'
+        'Crystal Chandeliers & Fairy Lights'
       ],
       whatsappTopic: 'Stage & Floral Decoration'
     },
     {
       number: '04',
+      totalCount: '06',
       category: 'Live Music & Audio Engineering',
       title: 'Karaoke & Live Ganamela',
       tagline: 'Interactive Singing & Acoustic Melodies',
@@ -81,14 +82,14 @@ export default function Services() {
       icon: Mic2,
       features: [
         'Interactive Live Karaoke Systems',
-        'Experienced Ganamela Troupe',
-        'Concert-Grade Sound Engineering',
-        'Curated Regional & Old-School Hits'
+        'Seasoned Ganamela Musicians',
+        'Concert-Grade Sound Balancing'
       ],
       whatsappTopic: 'Karaoke & Live Ganamela'
     },
     {
       number: '05',
+      totalCount: '06',
       category: 'Bridal Festivities',
       title: 'Mailanji / Mehendi Night',
       tagline: 'Themed Canopies, Low Seating & Artists',
@@ -98,15 +99,15 @@ export default function Services() {
       alt: 'OMR A2Z Evening Promenade & Festive Lighting',
       icon: Sparkles,
       features: [
-        'Themed Bridal Canopy & Mattresses',
+        'Themed Bridal Canopy & Seating',
         'Expert Bridal Mehendi Artists',
-        'Fairy-Lit Festive Photo Booths',
-        'Traditional Props & Festive Ambience'
+        'Fairy-Lit Festive Photo Booths'
       ],
       whatsappTopic: 'Mailanji & Mehendi Night'
     },
     {
       number: '06',
+      totalCount: '06',
       category: 'Traditional Cultural Heritage',
       title: 'Oppana, Daffmuttu & Kolkkali',
       tagline: 'Authentic Malabar Cultural Entertainment',
@@ -118,24 +119,27 @@ export default function Services() {
       features: [
         'Professional Oppana Dance Troupe',
         'Royal Daffmuttu Welcome Procession',
-        'High-Energy Kolkkali Performances',
-        'Traditional Attire & Live Percussion'
+        'High-Energy Kolkkali Performances'
       ],
       whatsappTopic: 'Cultural Performances - Oppana, Daffmuttu & Kolkkali'
     }
   ]
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-[#FAF8F5] overflow-hidden border-b border-[#EAE5DE]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 lg:py-32 bg-[#FAF8F5] relative border-b border-[#EAE5DE]">
+      {/* Subtle Ambient Background Accent */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-[#C6A46A]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-[#A52A32]/4 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header with Scroll Reveal */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#EAE5DE]"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#EAE5DE]"
         >
           <div>
             <div className="flex items-center gap-3 mb-3">
@@ -151,106 +155,123 @@ export default function Services() {
               </span>
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-[#77716A] max-w-md mt-4 md:mt-0 font-normal leading-relaxed">
-            From delicious Thalassery feast catering, waterproof pandhals, and stage decor to karaoke, Mailanji nights, and Oppana—we tailor every single element to your family’s exact requirements.
-          </p>
         </motion.div>
 
-        {/* Editorial 6-Service Grid with Staggered Scroll Animation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* Scroll-Triggered Stacking Cards Deck */}
+        <div className="relative pb-10">
           {services.map((service, index) => {
             const IconComp = service.icon
+            // Fluid responsive top offset that perfectly adapts from mobile to large screens
+            const topOffsetFluid = `calc(clamp(4.2rem, 8vh, 5.2rem) + ${index * 14}px)`
+
             return (
-              <motion.div
+              <div
                 key={service.number}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, delay: (index % 3) * 0.12 }}
-                whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className="group flex flex-col bg-white border border-[#EAE5DE] hover:border-[#C6A46A]/60 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] rounded-sm overflow-hidden"
+                className="sticky mb-20 sm:mb-28 lg:mb-36 last:mb-6 transition-all duration-300"
+                style={{
+                  top: topOffsetFluid,
+                  zIndex: 10 + index
+                }}
               >
-                {/* Service Photograph & Overlays */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF8F5]">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                    loading="lazy"
-                  />
+                {/* Single Luxury Card Container */}
+                <div className="bg-white rounded-2xl sm:rounded-3xl border border-[#EAE5DE] hover:border-[#C6A46A]/80 shadow-[0_-8px_30px_rgba(0,0,0,0.05),0_20px_50px_rgba(34,32,30,0.09)] transition-all duration-300 overflow-hidden">
+                  
+                  {/* Card Content Grid */}
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center p-5 sm:p-8 lg:p-11">
+                    
+                    {/* Left Column: Minimal Clean Details */}
+                    <div className="lg:col-span-7 flex flex-col justify-between order-2 lg:order-1">
+                      <div>
+                        {/* Micro Header with Step Count & Category */}
+                        <div className="flex items-center justify-between gap-4 mb-4 pb-3 border-b border-[#EAE5DE]/80">
+                          <div className="flex items-center gap-3">
+                            <span className="text-xl sm:text-2xl font-semibold text-[#A52A32]">
+                              {service.number}
+                            </span>
+                            <span className="text-xs text-[#A7A19A] font-mono">
+                              / {service.totalCount}
+                            </span>
+                            <span className="text-[#C6A46A]">•</span>
+                            <span className="text-[10.5px] uppercase tracking-[0.22em] font-semibold text-[#A52A32]">
+                              {service.category}
+                            </span>
+                          </div>
 
-                  {/* Gradient Shade for Readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                          <div className="w-8 h-8 rounded-full bg-[#FAF8F5] border border-[#EAE5DE] flex items-center justify-center text-[#A52A32] flex-shrink-0">
+                            <IconComp className="w-4 h-4" />
+                          </div>
+                        </div>
 
-                  {/* Number Badge */}
-                  <div className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-mono font-semibold tracking-wider text-[#22201E] border border-[#EAE5DE]/80 shadow-xs rounded-xs">
-                    {service.number}
-                  </div>
+                        {/* Title */}
+                        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#22201E] tracking-tight leading-tight">
+                          {service.title}
+                        </h3>
 
-                  {/* Icon Floating Badge */}
-                  <div className="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md border border-[#EAE5DE] flex items-center justify-center text-[#A52A32] shadow-xs">
-                    <IconComp className="w-4 h-4" />
-                  </div>
-                </div>
+                        {/* Tagline */}
+                        <p className="text-xs sm:text-sm text-[#77716A] mt-1 mb-4 font-normal">
+                          "{service.tagline}"
+                        </p>
 
-                {/* Service Content */}
-                <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#A52A32] font-semibold block mb-1">
-                      {service.category}
-                    </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="font-serif italic text-xs text-[#77716A] mt-0.5 mb-3">
-                      "{service.tagline}"
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#59534B] leading-relaxed mb-6 font-normal">
-                      {service.description}
-                    </p>
-                  </div>
+                        {/* Minimal Narrative */}
+                        <p className="text-xs sm:text-sm text-[#59534B] leading-relaxed mb-6 font-normal max-w-xl">
+                          {service.description}
+                        </p>
 
-                  <div className="pt-4 border-t border-[#EAE5DE]/60">
-                    <div className="flex flex-wrap gap-1.5 mb-5">
-                      {service.features.map((feat) => (
-                        <span
-                          key={feat}
-                          className="text-[10.5px] bg-[#FAF8F5] text-[#59534B] px-2.5 py-1 border border-[#EAE5DE]/80 rounded-xs flex items-center gap-1.5 font-medium"
+                      </div>
+
+                      {/* Direct WhatsApp Enquiry Button */}
+                      <div className="pt-2">
+                        <a
+                          href={`https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.whatsappTopic)}.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-whatsapp-pill sm:w-auto inline-flex group"
                         >
-                          <CheckCircle2 className="w-3 h-3 text-[#A52A32] flex-shrink-0" />
-                          <span>{feat}</span>
-                        </span>
-                      ))}
+                          <span className="truncate pr-3">
+                            Enquire About {service.title}
+                          </span>
+                          <span className="wa-disc">
+                            <WhatsAppIcon className="w-4 h-4 fill-current" />
+                          </span>
+                        </a>
+                      </div>
                     </div>
 
-                    {/* Direct WhatsApp Action Button */}
-                    <a
-                      href={`https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.whatsappTopic)}.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-whatsapp-pill group"
-                    >
-                      <span className="truncate pr-2">
-                        Enquire About {service.title}
-                      </span>
-                      <span className="wa-disc">
-                        <WhatsAppIcon className="w-4 h-4 fill-current" />
-                      </span>
-                    </a>
+                    {/* Right Column: High-Impact Cinematic Image */}
+                    <div className="lg:col-span-5 order-1 lg:order-2">
+                      <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-[#FAF8F5] border border-[#EAE5DE] group shadow-inner">
+                        <img
+                          src={service.image}
+                          alt={service.alt}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+
+                        {/* Subtle Editorial Overlay Tag */}
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-[11px] font-medium backdrop-blur-xs bg-black/45 px-3.5 py-1.5 rounded-full border border-white/20">
+                          <span className="tracking-wide">In-House Production</span>
+                          <span className="text-[#C6A46A] uppercase font-semibold text-[10px] tracking-wider">
+                            Thalassery · Kannur
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>
 
-        {/* Tailored Consultation Callout - Original Clean Luxury Style */}
+        {/* Tailored Consultation Callout - After Stacking Deck */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-14 p-6 sm:p-8 bg-white border border-[#EAE5DE] flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl shadow-xs hover:shadow-md transition-shadow duration-300"
+          className="mt-8 p-6 sm:p-8 bg-white border border-[#EAE5DE] flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl shadow-xs hover:shadow-md transition-shadow duration-300"
         >
           <div>
             <h4 className="font-serif text-xl font-semibold text-[#22201E]">
@@ -264,10 +285,10 @@ export default function Services() {
             href="https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20discuss%20a%20customized%20event%20package%20for%20my%20function."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary group self-stretch sm:self-auto"
+            className="btn-whatsapp-pill group self-stretch sm:self-auto"
           >
-            <span>Consult on WhatsApp</span>
-            <span className="btn-disc">
+            <span className="pr-3">Consult on WhatsApp</span>
+            <span className="wa-disc">
               <WhatsAppIcon className="w-4 h-4 fill-current" />
             </span>
           </a>

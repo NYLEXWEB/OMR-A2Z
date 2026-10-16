@@ -46,7 +46,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="font-serif text-2xl font-bold tracking-tight text-white block">
+                <span className="text-2xl font-semibold tracking-[-0.02em] text-white block">
                   OMR A2Z
                 </span>
                 <span className="text-xs uppercase tracking-[0.2em] text-[#C6A46A] font-medium">

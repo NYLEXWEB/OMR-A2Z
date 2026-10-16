@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, ArrowUpRight, MapPin, ChevronDown } from 'lucide-react'
+import { ArrowRight, Sparkles, ChevronDown } from 'lucide-react'
 
 export default function Hero() {
   const scrollToSection = (e, id) => {
@@ -22,125 +22,141 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full h-[100dvh] min-h-[640px] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[100dvh] flex items-center overflow-hidden bg-[#FAF8F5]"
     >
-      {/* Background Image Container */}
+      {/* Background White Luxury Hall Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/omr-a2z-hero.png"
-          alt="OMR A2Z Luxury Wedding Reception and Banquet in Thalassery Kannur"
-          className="w-full h-full object-cover object-center lg:object-[center_35%]"
+          src="/images/hero-white-luxury.jpg"
+          alt="OMR A2Z Luxury White Theme Wedding Reception Hall"
+          className="w-full h-full object-cover object-[center_right] sm:object-center"
           fetchPriority="high"
           loading="eager"
         />
-        {/* Subtle cinematic overlays for pristine text readability while highlighting the sunset */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1817]/90 via-[#1A1817]/50 to-[#1A1817]/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A1817]/65 via-transparent to-[#1A1817]/40" />
+
+        {/* Desktop: Crisp Left-to-Center White Fade ONLY (0% to 50%), completely clear on the right */}
+        <div
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background:
+              'linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 25%, rgba(255, 255, 255, 0.75) 38%, rgba(255, 255, 255, 0) 50%)'
+          }}
+        />
+
+        {/* Mobile / Tablet: Smooth Top-to-Mid Fade so text stays legible on narrow screens */}
+        <div
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0) 70%)'
+          }}
+        />
       </div>
 
-      {/* Hero Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col items-center pt-16 sm:pt-20">
-        
-        {/* Location pill */}
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-5 sm:mb-6 text-[11px] sm:text-xs tracking-[0.2em] uppercase font-medium text-[#FAF8F5]"
-        >
-          <MapPin className="w-3.5 h-3.5 text-[#C6A46A]" />
-          <span>Thalassery · Kannur · Kerala</span>
-        </motion.div>
-
-        {/* Cinematic Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.12] max-w-4xl mb-5 sm:mb-6 drop-shadow-md"
-        >
-          Every Celebration,<br />
-          <span className="italic font-normal text-[#F2ECE1]">Beautifully Brought to Life.</span>
-        </motion.h1>
-
-        {/* Supporting Copy */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-white/90 font-normal leading-relaxed max-w-2xl mb-8 sm:mb-9 text-balance drop-shadow-sm"
-        >
-          From unforgettable weddings to thoughtfully curated celebrations, OMR A2Z brings every detail together with care and precision.
-        </motion.p>
-
-        {/* Primary and Secondary CTA Buttons (Capsule pill with action discs) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto"
-        >
-          <a
-            href="#contact"
-            onClick={(e) => scrollToSection(e, '#contact')}
-            className="btn-primary w-full sm:w-auto group"
+      {/* Main Content Container (Left-Aligned, Minimal, Editorial Style) */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-28 sm:pt-36 pb-20">
+        <div className="max-w-2xl text-left">
+          
+          {/* Subtle Location Pill */}
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#EAE5DE] shadow-xs mb-6"
           >
-            <span>Plan Your Event</span>
-            <span className="btn-disc">
-              <Calendar className="w-3.5 h-3.5" />
+            <span className="w-2 h-2 rounded-full bg-[#A52A32] animate-pulse" />
+            <span className="text-[10.5px] sm:text-xs font-medium tracking-[0.22em] uppercase text-[#77716A]">
+              OMR A2Z · Thalassery, Kannur
             </span>
-          </a>
+          </motion.div>
 
-          <a
-            href="#gallery"
-            onClick={(e) => scrollToSection(e, '#gallery')}
-            className="btn-hero-secondary w-full sm:w-auto group"
+          {/* Apple-style Minimal Slim Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] font-normal tracking-[-0.035em] text-[#22201E] leading-[1.05] mb-5"
           >
-            <span>Explore Our Work</span>
-            <span className="btn-disc">
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </span>
-          </a>
-        </motion.div>
+            Weddings,<br />
+            <span className="font-light text-[#9C222A]">Flawlessly Curated.</span>
+          </motion.h1>
 
-        {/* Bottom Hallmark Strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/15 w-full max-w-3xl grid grid-cols-2 sm:grid-cols-4 gap-4 text-center"
-        >
-          <div className="flex flex-col items-center">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/60 font-medium">Bespoke</span>
-            <span className="text-xs sm:text-sm font-serif font-semibold text-[#FAF8F5] mt-0.5">Wedding Decor</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/60 font-medium">Authentic</span>
-            <span className="text-xs sm:text-sm font-serif font-semibold text-[#FAF8F5] mt-0.5">Malabar Catering</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/60 font-medium">End-to-End</span>
-            <span className="text-xs sm:text-sm font-serif font-semibold text-[#FAF8F5] mt-0.5">Event Management</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/60 font-medium">Dedicated</span>
-            <span className="text-xs sm:text-sm font-serif font-semibold text-[#FAF8F5] mt-0.5">Guest Hospitality</span>
-          </div>
-        </motion.div>
+          {/* Minimal, Punchy Supporting Copy */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-sm sm:text-base md:text-lg text-[#59534B] font-light leading-relaxed max-w-xl mb-8"
+          >
+            Bespoke wedding decor, authentic Thalassery feasts, and seamless event management tailored to your celebrations.
+          </motion.p>
 
+          {/* Primary & Secondary Call to Actions */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, '#contact')}
+              className="btn-primary group"
+            >
+              <span>Plan Your Event</span>
+              <span className="btn-disc">
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </a>
+
+            <a
+              href="#services"
+              onClick={(e) => scrollToSection(e, '#services')}
+              className="btn-secondary group"
+            >
+              <span>Explore Services</span>
+              <span className="btn-disc">
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </a>
+          </motion.div>
+
+          {/* Minimal Refined Highlights */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="mt-12 pt-6 border-t border-[#EAE5DE] flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#77716A] font-medium"
+          >
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
+              <span>Bespoke Stage & Draping</span>
+            </div>
+            <div className="hidden sm:block w-1 h-1 rounded-full bg-[#D8D2C9]" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
+              <span>Royal Dum Biryani Feasts</span>
+            </div>
+            <div className="hidden sm:block w-1 h-1 rounded-full bg-[#D8D2C9]" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
+              <span>Complete Turnkey Planning</span>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
 
-      {/* Subtle Scroll Down Prompt Indicator */}
+      {/* Subtle Scroll Down Prompt */}
       <a
         href="#about"
         onClick={(e) => scrollToSection(e, '#about')}
-        className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors flex flex-col items-center gap-1 z-10"
+        className="hidden md:flex absolute bottom-5 left-10 lg:left-16 text-[#77716A] hover:text-[#9C222A] transition-colors items-center gap-2 z-10 group"
         aria-label="Scroll to About section"
       >
-        <span className="text-[9px] uppercase tracking-[0.25em] font-medium">Scroll</span>
-        <ChevronDown className="w-4 h-4 animate-bounce" />
+        <span className="text-[10px] uppercase tracking-[0.25em] font-semibold">Scroll Down</span>
+        <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" />
       </a>
-
     </section>
   )
 }

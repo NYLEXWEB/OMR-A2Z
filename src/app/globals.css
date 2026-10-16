@@ -13,15 +13,22 @@
     --color-border: #EAE5DE;
   }
 
-  html {
+  html, body {
     scroll-behavior: smooth;
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "Inter", -apple-system-body, system-ui, sans-serif;
     color: var(--color-charcoal);
     background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.012em;
+    font-weight: 350;
   }
 
-  h1, h2, h3, h4, .font-serif {
-    font-family: 'Playfair Display', Georgia, serif;
+  h1, h2, h3, h4, .font-serif, .font-editorial, .font-heading {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Inter", system-ui, sans-serif !important;
+    letter-spacing: -0.025em;
+    font-weight: 500;
   }
 }
 
@@ -50,8 +57,8 @@
   background: linear-gradient(135deg, #9C222A 0%, #7C151B 100%);
   color: #FFFFFF;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 550;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.42rem 0.45rem 0.42rem 1.55rem;
   border-radius: 9999px;
@@ -101,8 +108,8 @@
   background-color: #FFFFFF;
   color: #22201E;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 550;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.42rem 0.45rem 0.42rem 1.45rem;
   border-radius: 9999px;
@@ -193,25 +200,27 @@
   transform: translateY(0);
 }
 
-/* Unique Pill WhatsApp Concierge Button (For Services Cards) */
+/* Unique Pill WhatsApp Concierge Button (Original Solid WhatsApp Green - No Gradient) */
 .btn-whatsapp-pill {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 0.35rem 0.45rem 0.35rem 1.25rem;
-  background: #FAF8F5;
-  color: #22201E;
-  border: 1px solid #E2DCD5;
+  gap: 0.85rem;
+  padding: 0.42rem 0.45rem 0.42rem 1.45rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: 1px solid #20BA5A;
   border-radius: 9999px;
-  font-size: 0.70rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.32);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   text-decoration: none;
+  overflow: hidden;
 }
 .btn-whatsapp-pill .wa-disc {
   display: flex;
@@ -220,23 +229,28 @@
   width: 2.1rem;
   height: 2.1rem;
   border-radius: 50%;
-  background: #25D366;
-  color: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+  background: #FFFFFF;
+  color: #25D366;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
 .btn-whatsapp-pill:hover {
-  background: #FFFFFF;
-  border-color: #25D366;
-  color: #0E6B39;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.18);
+  background-color: #20BA5A;
+  border-color: #1EBE5D;
+  color: #FFFFFF;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
   transform: translateY(-2px);
 }
 .btn-whatsapp-pill:hover .wa-disc {
-  transform: scale(1.1) rotate(8deg);
-  background: #20ba5a;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  transform: scale(1.08) translateX(2px);
+  background-color: #FAF8F5;
+  color: #20BA5A;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-whatsapp-pill:active {
+  transform: translateY(0);
+  background-color: #1EBE5D;
 }
 
 /* Dual-Row Smooth Marquee */
