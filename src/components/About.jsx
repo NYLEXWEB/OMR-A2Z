@@ -87,18 +87,18 @@ export default function About() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-4">
               <span className="w-8 h-[1px] bg-[#A52A32]" />
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A52A32]">
+              <span className="text-xs uppercase tracking-[0.22em] font-medium text-[#A52A32]">
                 The Art of Celebration
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[#22201E] leading-[1.18] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#22201E] leading-[1.12] mb-6">
               Moments Worth Remembering.
             </h2>
 
             {/* Description Paragraphs */}
-            <div className="space-y-4 text-sm sm:text-base text-[#59534B] leading-relaxed mb-8">
+            <div className="space-y-4 text-sm sm:text-base text-[#59534B] font-light leading-relaxed mb-8">
               <p>
                 Every celebration has its own story. We bring thoughtful planning,
                 beautiful presentation, and attentive service together to help make
@@ -113,25 +113,7 @@ export default function About() {
               </p>
             </div>
 
-            {/* Refined Two-Column Signature Hallmarks */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-[#EAE5DE] mb-8">
-              <div className="group">
-                <span className="font-serif text-lg font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors block mb-1">
-                  Thoughtful Coordination
-                </span>
-                <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
-                  Structured timelines, calm orchestration, and watchful on-ground management from dawn to send-off.
-                </p>
-              </div>
-              <div className="group">
-                <span className="font-serif text-lg font-semibold text-[#22201E] group-hover:text-[#A52A32] transition-colors block mb-1">
-                  Bespoke Presentation
-                </span>
-                <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
-                  Tailored floral stage architecture, marquee draping, crystal lighting, and authentic Malabar dining.
-                </p>
-              </div>
-            </div>
+
 
             {/* CTA (Luxury Capsule Button) */}
             <div className="pt-2">
@@ -184,17 +166,7 @@ export default function About() {
                   {/* Top Header Overlay with Badges & Sound Controller */}
                   <div className="absolute top-0 inset-x-0 p-3.5 sm:p-4 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex items-center justify-between z-10 pointer-events-none">
                     
-                    {/* Live Footage Indicator */}
-                    <div className="inline-flex items-center gap-2 bg-black/55 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/15 shadow-sm">
-                      <span className="w-2 h-2 rounded-full bg-[#E53935] animate-pulse" />
-                      <span className="text-[10px] uppercase font-bold tracking-[0.16em] text-white">
-                        Live Event
-                      </span>
-                      <span className="text-[10px] text-white/50">•</span>
-                      <span className="text-[10px] uppercase tracking-wider text-[#C6A46A] font-semibold">
-                        Kannur
-                      </span>
-                    </div>
+                  
 
                     {/* Interactive Sound Toggle */}
                     <button
@@ -231,17 +203,13 @@ export default function About() {
                   {/* Bottom Vignette & Event Caption */}
                   <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10 pointer-events-none">
                     <div className="flex items-center gap-2 mb-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
-                      <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#C6A46A]">
+                      <span className="text-[10px] uppercase font-medium tracking-[0.2em] text-[#C6A46A]">
                         Signature Stage & Ambience
                       </span>
                     </div>
-                    <h3 className="font-serif text-base sm:text-lg font-medium text-white leading-tight drop-shadow-sm">
+                    <h3 className="text-base sm:text-lg font-normal text-white leading-tight drop-shadow-sm">
                       Real Celebration Moments
                     </h3>
-                    <p className="text-[11px] text-white/80 mt-1 line-clamp-2 font-normal leading-relaxed">
-                      Captured live on-site in Thalassery. Handcrafted marquee draping, crystal chandeliers & warm hospitality.
-                    </p>
 
                     {/* Slim Gold Playback Progress Bar */}
                     <div className="w-full h-1 bg-white/25 rounded-full mt-3 overflow-hidden">
@@ -255,26 +223,7 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Floating Luxury Editorial Badge Overlapping Frame Corner */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="hidden sm:flex absolute -bottom-5 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full border border-[#C6A46A]/50 shadow-[0_10px_25px_rgba(0,0,0,0.12)] items-center gap-2.5 z-20 pointer-events-none"
-              >
-                <div className="w-7 h-7 rounded-full bg-[#FAF8F5] border border-[#C6A46A]/40 flex items-center justify-center text-[#A52A32]">
-                  <Film className="w-3.5 h-3.5" />
-                </div>
-                <div className="text-left pr-1">
-                  <span className="text-[9px] uppercase tracking-widest text-[#C6A46A] font-bold block leading-none">
-                    OMR A2Z In-House
-                  </span>
-                  <span className="text-[11px] font-serif font-semibold text-[#22201E] mt-0.5 block leading-none">
-                    100% Real Production
-                  </span>
-                </div>
-              </motion.div>
+
 
             </div>
           </motion.div>

@@ -93,9 +93,6 @@ export default function SocialSection() {
             Follow Our Celebrations
           </h2>
 
-          <p className="text-sm sm:text-base text-[#77716A] leading-relaxed">
-            Stay in touch across your preferred platform. View our active work, behind-the-scenes moments, and get in touch with our team in Thalassery.
-          </p>
         </motion.div>
 
         {/* 4 Platforms Grid with Staggered Scroll Animation and Official Colors */}

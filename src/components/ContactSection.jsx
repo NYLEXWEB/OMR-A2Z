@@ -127,10 +127,6 @@ _Sent via omra2z.com inquiry form_`
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[#22201E] mb-4">
             Let's Plan Something Memorable.
           </h2>
-
-          <p className="text-sm sm:text-base text-[#77716A] leading-relaxed">
-            Tell us a little about your celebration and the experience you have in mind. We respond promptly with thoughtful advice, availability, and transparent options.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">

@@ -27,7 +27,7 @@ export default function Hero() {
       {/* Background White Luxury Hall Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-white-luxury.jpg"
+          src="/images/hero-section.png"
           alt="OMR A2Z Luxury White Theme Wedding Reception Hall"
           className="w-full h-full object-cover object-[center_right] sm:object-center"
           fetchPriority="high"
@@ -56,19 +56,7 @@ export default function Hero() {
       {/* Main Content Container (Left-Aligned, Minimal, Editorial Style) */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-28 sm:pt-36 pb-20">
         <div className="max-w-2xl text-left">
-          
-          {/* Subtle Location Pill */}
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#EAE5DE] shadow-xs mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#A52A32] animate-pulse" />
-            <span className="text-[10.5px] sm:text-xs font-medium tracking-[0.22em] uppercase text-[#77716A]">
-              OMR A2Z · Thalassery, Kannur
-            </span>
-          </motion.div>
+
 
           {/* Apple-style Minimal Slim Headline */}
           <motion.h1
@@ -119,29 +107,6 @@ export default function Hero() {
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
               </span>
             </a>
-          </motion.div>
-
-          {/* Minimal Refined Highlights */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.55 }}
-            className="mt-12 pt-6 border-t border-[#EAE5DE] flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#77716A] font-medium"
-          >
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
-              <span>Bespoke Stage & Draping</span>
-            </div>
-            <div className="hidden sm:block w-1 h-1 rounded-full bg-[#D8D2C9]" />
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
-              <span>Royal Dum Biryani Feasts</span>
-            </div>
-            <div className="hidden sm:block w-1 h-1 rounded-full bg-[#D8D2C9]" />
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#C6A46A]" />
-              <span>Complete Turnkey Planning</span>
-            </div>
           </motion.div>
 
         </div>

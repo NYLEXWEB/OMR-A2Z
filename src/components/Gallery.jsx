@@ -146,17 +146,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Always-visible clean label strip */}
-                <div className="p-3 bg-white border-t border-[#EAE5DE] flex items-center justify-between">
-                  <div className="truncate pr-2">
-                    <span className="text-[10px] uppercase tracking-wider text-[#A52A32] font-semibold block leading-none">
-                      {item.subtitle}
-                    </span>
-                    <p className="font-serif text-xs font-semibold text-[#22201E] mt-1 truncate">
-                      {item.title}
-                    </p>
-                  </div>
-                  <ZoomIn className="w-3.5 h-3.5 text-[#C6A46A] flex-shrink-0 opacity-60 group-hover:opacity-100" />
-                </div>
+              
               </div>
             ))}
           </div>
@@ -194,17 +184,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Always-visible clean label strip */}
-                <div className="p-3 bg-white border-t border-[#EAE5DE] flex items-center justify-between">
-                  <div className="truncate pr-2">
-                    <span className="text-[10px] uppercase tracking-wider text-[#A52A32] font-semibold block leading-none">
-                      {item.subtitle}
-                    </span>
-                    <p className="font-serif text-xs font-semibold text-[#22201E] mt-1 truncate">
-                      {item.title}
-                    </p>
-                  </div>
-                  <ZoomIn className="w-3.5 h-3.5 text-[#C6A46A] flex-shrink-0 opacity-60 group-hover:opacity-100" />
-                </div>
+               
               </div>
             ))}
           </div>

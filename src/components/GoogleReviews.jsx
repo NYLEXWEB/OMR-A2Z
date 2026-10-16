@@ -80,10 +80,6 @@ export default function GoogleReviews() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[#22201E] mb-4">
             Words from Celebrations We've Shared
           </h2>
-
-          <p className="text-sm sm:text-base text-[#77716A] leading-relaxed">
-            Real feedback from families across Thalassery and Kannur who trusted OMR A2Z with their most cherished milestones.
-          </p>
         </motion.div>
 
         {/* Google Summary Header Box positioned below heading per user request */}

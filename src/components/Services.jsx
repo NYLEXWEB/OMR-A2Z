@@ -197,9 +197,7 @@ export default function Services() {
                             </span>
                           </div>
 
-                          <div className="w-8 h-8 rounded-full bg-[#FAF8F5] border border-[#EAE5DE] flex items-center justify-center text-[#A52A32] flex-shrink-0">
-                            <IconComp className="w-4 h-4" />
-                          </div>
+
                         </div>
 
                         {/* Title */}
@@ -228,7 +226,7 @@ export default function Services() {
                           className="btn-whatsapp-pill sm:w-auto inline-flex group"
                         >
                           <span className="truncate pr-3">
-                            Enquire About {service.title}
+                            Enquire On Whatsapp
                           </span>
                           <span className="wa-disc">
                             <WhatsAppIcon className="w-4 h-4 fill-current" />
@@ -248,13 +246,7 @@ export default function Services() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
-                        {/* Subtle Editorial Overlay Tag */}
-                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-[11px] font-medium backdrop-blur-xs bg-black/45 px-3.5 py-1.5 rounded-full border border-white/20">
-                          <span className="tracking-wide">In-House Production</span>
-                          <span className="text-[#C6A46A] uppercase font-semibold text-[10px] tracking-wider">
-                            Thalassery · Kannur
-                          </span>
-                        </div>
+
                       </div>
                     </div>
 
@@ -285,7 +277,7 @@ export default function Services() {
             href="https://wa.me/919074796765?text=Hi%20OMR%20A2Z,%20I%20would%20like%20to%20discuss%20a%20customized%20event%20package%20for%20my%20function."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-whatsapp-pill group self-stretch sm:self-auto"
+            className="btn-primary group self-stretch sm:self-auto"
           >
             <span className="pr-3">Consult on WhatsApp</span>
             <span className="wa-disc">
