@@ -24,10 +24,10 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
+         <VideoSection />
         <MenuSection />
         <Services />
         <Gallery />
-        <VideoSection />
         <SocialSection />
         <GoogleReviews />
         <WhyChooseUs />

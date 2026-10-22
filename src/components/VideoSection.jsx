@@ -709,20 +709,20 @@ export default function VideoSection() {
 
   // 3 Selected Instagram Video Posts from public/video/
   const instagramPosts = [
-    {
+     {
       id: 'post-1',
-      videoSrc: '/video/4_5950474444676795293.mp4',
-      location: 'Kannur Royal Marquee, Kerala',
-      audioTitle: 'OMR A2Z • Grand Reception Symphony',
-      initialLikes: 1842,
-      dateAgo: '2 DAYS AGO',
+      videoSrc: '/video/VID-20261022-WA0099.mp4',
+      location: 'Thalassery Heritage Lounge',
+      audioTitle: 'OMR A2Z • Royal Bridal Promenade',
+      initialLikes: 3512,
+      dateAgo: '1 WEEK AGO',
       caption:
-        'Grand Radial Canopy & Starburst Fairy Lighting ✨ When royal burgundy drapes meet thousands of cascading fairy lights, unforgettable moments are born. Designed with bespoke crystal chandeliers and warm incandescent ambiance in Kannur. 🏛️💐',
-      hashtags: ['#OMRA2Z', '#KannurWeddings', '#KeralaEvents', '#WeddingDecor', '#LuxuryPlanners'],
+        'Grand Radial Canopy & Starburst Fairy Lighting ✨',
+      hashtags: ['#StageDecoration', '#KeralaBride', '#KeralaGroom', '#KannurDiaries', '#RoyalCelebrations'],
       initialComments: [
-        { id: 1, user: 'anjali_nair_weddings', text: 'The ceiling drape starburst is breathtaking! 😍', timeAgo: '2d ago' },
-        { id: 2, user: 'rahul_rajesh_99', text: 'Exceptional perfection by OMR A2Z team 👏🔥', timeAgo: '1d ago' },
-        { id: 3, user: 'kavya_krishnan', text: 'Dream decor for any wedding reception ✨', timeAgo: '18h ago' }
+        { id: 1, user: 'dr_sneha_menon', text: 'Felt like walking into a royal palace! Loved every detail ❤️✨', timeAgo: '6d ago' },
+        { id: 2, user: 'akhil_photography', text: 'Lighting was super photographer-friendly, shots came out crisp 📸', timeAgo: '5d ago' },
+        { id: 3, user: 'resmi_vipin', text: 'Pure elegance! Booking you for our upcoming family event 🎉', timeAgo: '4d ago' }
       ]
     },
     {
@@ -756,7 +756,23 @@ export default function VideoSection() {
         { id: 2, user: 'akhil_photography', text: 'Lighting was super photographer-friendly, shots came out crisp 📸', timeAgo: '5d ago' },
         { id: 3, user: 'resmi_vipin', text: 'Pure elegance! Booking you for our upcoming family event 🎉', timeAgo: '4d ago' }
       ]
+    }, {
+      id: 'post-4',
+      videoSrc: '/video/4_5950474444676795293.mp4',
+      location: 'Kannur Royal Marquee, Kerala',
+      audioTitle: 'OMR A2Z • Grand Reception Symphony',
+      initialLikes: 1842,
+      dateAgo: '2 DAYS AGO',
+      caption:
+        'Grand Radial Canopy & Starburst Fairy Lighting ✨ When royal burgundy drapes meet thousands of cascading fairy lights, unforgettable moments are born. Designed with bespoke crystal chandeliers and warm incandescent ambiance in Kannur. 🏛️💐',
+      hashtags: ['#OMRA2Z', '#KannurWeddings', '#KeralaEvents', '#WeddingDecor', '#LuxuryPlanners'],
+      initialComments: [
+        { id: 1, user: 'anjali_nair_weddings', text: 'The ceiling drape starburst is breathtaking! 😍', timeAgo: '2d ago' },
+        { id: 2, user: 'rahul_rajesh_99', text: 'Exceptional perfection by OMR A2Z team 👏🔥', timeAgo: '1d ago' },
+        { id: 3, user: 'kavya_krishnan', text: 'Dream decor for any wedding reception ✨', timeAgo: '18h ago' }
+      ]
     }
+     
   ]
 
   return (
@@ -810,7 +826,7 @@ export default function VideoSection() {
         </motion.div>
 
         {/* 3 Instagram Post Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-start">
           {instagramPosts.map((post) => (
             <InstagramPostCard key={post.id} post={post} onToast={showToast} />
           ))}
