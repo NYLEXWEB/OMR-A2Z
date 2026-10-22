@@ -22,14 +22,15 @@ export default function Services() {
       title: 'Catering & Grand Feasts',
       tagline: 'Authentic Thalassery Dum Biryani & Royal Buffets',
       description:
-        'Food is the heart of every Malabar celebration. We craft royal Thalassery Dum Biryani, traditional sadya, multi-cuisine banquets, live hot food stations, and traditional refreshment stalls with trained, uniformed service staff.',
+        'Food is the heart of every Malabar celebration. Our complete catering packages include royal Thalassery Dum Biryani, traditional sadya, live hot counters, chafing dish stations, premium fiber or disposable plates, and courteous uniformed catering boys and girls.',
       image: '/images/file_000000003f6081f48b445869d52cf598.png',
       alt: 'OMR A2Z Catering & Food Lounge Presentation',
       icon: UtensilsCrossed,
       features: [
         'Thalassery Dum Biryani & Sadya',
-        'Live Welcome Counters & Drinks',
-        'Uniformed Hospitality Crew'
+        'Catering Boys & Girls (Service Crew)',
+        'Fiber Plates & Eco Disposables',
+        'Live Counters & Chafing Dish Setup'
       ],
       whatsappTopic: 'Catering & Food Services'
     },
