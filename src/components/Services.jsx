@@ -23,7 +23,7 @@ export default function Services() {
       tagline: 'Authentic Thalassery Dum Biryani & Royal Buffets',
       description:
         'Food is the heart of every Malabar celebration. We craft royal Thalassery Dum Biryani, traditional sadya, multi-cuisine banquets, live hot food stations, and traditional refreshment stalls with trained, uniformed service staff.',
-      image: '/images/-5948478724158197594_119.jpg',
+      image: '/images/file_000000003f6081f48b445869d52cf598.png',
       alt: 'OMR A2Z Catering & Food Lounge Presentation',
       icon: UtensilsCrossed,
       features: [
@@ -59,7 +59,7 @@ export default function Services() {
       tagline: 'Bespoke Stages, Fresh Flowers & Lighting',
       description:
         'Spectacular wedding stage architecture tailored to your theme. Traditional Nikah backdrops, Mandap designs, fresh floral arches, cascading crystal chandeliers, and cinematic atmospheric lighting that elevates photography.',
-      image: '/images/-5948577014484766555_119.jpg',
+      image: '/images/Stage & Stage Decoration.png',
       alt: 'OMR A2Z Floral Wedding Stage & Entrance Decor',
       icon: Palette,
       features: [
@@ -77,7 +77,7 @@ export default function Services() {
       tagline: 'Interactive Singing & Acoustic Melodies',
       description:
         'Keep your guests captivated with lively karaoke setups and melodious Ganamela troupes. High-definition wireless microphones, seasoned vocalists, acoustic orchestral accompaniment, and concert-grade sound balancing.',
-      image: '/images/-5948480493684723537_119.jpg',
+      image: '/images/Karaoke & Live Ganamela.png',
       alt: 'OMR A2Z Audio, Lighting & Atmosphere Experience',
       icon: Mic2,
       features: [
@@ -95,7 +95,7 @@ export default function Services() {
       tagline: 'Themed Canopies, Low Seating & Artists',
       description:
         'Magical Mailanji Idal night setups with boho-chic floor mattresses, fairy-lit bridal thrones, traditional brass lamps, festive photo props, curated music, and booking of top bridal Mehendi artists.',
-      image: '/images/-5948153251536506696_119.jpg',
+      image: '/images/Mailanji  Mehendi Night.png',
       alt: 'OMR A2Z Evening Promenade & Festive Lighting',
       icon: Sparkles,
       features: [
@@ -113,7 +113,7 @@ export default function Services() {
       tagline: 'Authentic Malabar Cultural Entertainment',
       description:
         'Celebrate Kerala wedding roots with vibrant traditional artforms. Graceful Oppana dance troupes to accompany the bride, spirited rhythmic Daffmuttu processions to welcome the groom, and energetic live Kolkkali performances.',
-      image: '/images/-5945938594599997336_119.jpg',
+      image: '/images/Oppana, Daffmuttu & Kolkkali.png',
       alt: 'OMR A2Z Malabar Traditional Counter & Cultural Setup',
       icon: Music,
       features: [

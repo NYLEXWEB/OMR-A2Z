@@ -12,6 +12,7 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
 import { WhatsAppIcon, InstagramIcon } from '../components/Icons'
+import MenuSection from '../components/MenuSection'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
+        <MenuSection />
         <Services />
         <Gallery />
         <VideoSection />

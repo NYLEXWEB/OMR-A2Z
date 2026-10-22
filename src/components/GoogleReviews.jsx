@@ -114,12 +114,12 @@ export default function GoogleReviews() {
 
           {/* Right: Write Review Button (Capsule pill with disc) */}
           <a
-            href="https://www.google.com/search?kgmid=%2Fg%2F11vzy34m5s&hl=en-IN&q=OMR%20A2Z%20EVENTS&shem=epsd1%2Cesd2e%2Cltae%2Crimspwouoe%2Csdpie&shndl=30&source=sh%2Fx%2Floc%2Fosrp%2Fm5%2F1&kgs=15fa3dcda84cca48"
+            href="https://www.google.com/search?q=omr+a2z+events&rlz=1C1YTUH_enIN1171IN1171&oq=om&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyCAgCEEUYJxg7MgoIAxAAGLEDGIAEMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg90gEINTg2NWowajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x3ba427518f5792db:0x72a9ac2ad42a6a5e,3,,,,"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary group"
           >
-            <span>Read All Reviews on Google</span>
+            <span>Write a review</span>
             <span className="btn-disc">
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
