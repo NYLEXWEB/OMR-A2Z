@@ -147,7 +147,7 @@ export default function Footer() {
             <div className="space-y-3 text-xs sm:text-sm text-white/75">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C6A46A] flex-shrink-0 mt-0.5" />
-                <span>Thalassery, Kannur, Kerala, India</span>
+                <span> SS Rd, Pallithazhe, Chonadam, Thalassery, Kannur, Kerala 670104</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C6A46A] flex-shrink-0" />

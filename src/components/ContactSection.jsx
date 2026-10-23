@@ -465,7 +465,7 @@ _Sent via omra2z.com inquiry form_`
                       Primary Location
                     </span>
                     <p className="text-sm font-semibold text-[#22201E] mt-0.5">
-                      Thalassery, Kannur, Kerala, India
+                       SS Rd, Pallithazhe, Chonadam, Thalassery, Kannur, Kerala 670104
                     </p>
                     <p className="text-xs text-[#77716A] mt-0.5">
                       Coordination available throughout North Kerala

@@ -19,12 +19,11 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#22201E] relative selection:bg-[#A52A32] selection:text-white">
       {/* Refined Floating Header */}
       <Header />
-
       {/* Main Content Sections */}
       <main className="flex-grow">
         <Hero />
         <About />
-         <VideoSection />
+        <VideoSection />
         <MenuSection />
         <Services />
         <Gallery />
