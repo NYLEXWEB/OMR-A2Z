@@ -462,7 +462,7 @@ _Sent via omra2z.com inquiry form_`
                   </div>
                   <div>
                     <span className="text-[11px] uppercase tracking-wider text-[#77716A] font-semibold block">
-                      Primary Location
+                      Office Location
                     </span>
                     <p className="text-sm font-semibold text-[#22201E] mt-0.5">
                        SS Rd, Pallithazhe, Chonadam, Thalassery, Kannur, Kerala 670104
