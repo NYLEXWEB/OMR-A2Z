@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-4 px-3 sm:px-6 pointer-events-none">
       <div
-        className={`max-w-6xl mx-auto rounded-xl sm:rounded-2xl transition-all duration-300 pointer-events-auto border border-[#EAE5DE] ${
+        className={`container mx-auto rounded-xl sm:rounded-2xl transition-all duration-300 pointer-events-auto border border-[#EAE5DE] ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.08)] py-2.5 px-4 sm:px-6'
             : 'bg-white/90 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.04)] py-3 px-4 sm:px-6'

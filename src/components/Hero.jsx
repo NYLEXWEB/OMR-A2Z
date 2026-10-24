@@ -54,7 +54,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content Container (Left-Aligned, Minimal, Editorial Style) */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-28 sm:pt-36 pb-20">
+      <div className="relative z-10 container mx-auto px-6 sm:px-10 lg:px-16 w-full pt-28 sm:pt-36 pb-20">
         <div className="max-w-2xl text-left">
 
 
