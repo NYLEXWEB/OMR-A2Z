@@ -387,7 +387,7 @@ _Sent via omra2z.com inquiry form_`
                         href="tel:+919562731173"
                         className="text-base font-semibold text-[#22201E] hover:text-[#A52A32] transition-colors inline-block"
                       >
-                        +91 95627 31173
+                        +91  98953 31173
                       </a>
                     </div>
                     <p className="text-xs text-[#77716A] mt-0.5">Available for direct calls and inquiries</p>

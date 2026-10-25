@@ -157,7 +157,7 @@ export default function Footer() {
                   </a>
                   <span className="text-white/40">/</span>
                   <a href="tel:+919562731173" className="hover:text-white transition-colors">
-                    +91 95627 31173
+                    +91  98953 31173
                   </a>
                 </div>
               </div>
