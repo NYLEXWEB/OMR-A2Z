@@ -1,5 +1,3 @@
-'use client'
-
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -19,7 +17,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#22201E] relative selection:bg-[#A52A32] selection:text-white">
       {/* Refined Floating Header */}
       <Header />
-      {/* Main Content Sections */}
+
+      {/* Main Content Sections with Semantic Layout */}
       <main className="flex-grow">
         <Hero />
         <About />
@@ -36,15 +35,15 @@ export default function Home() {
       {/* Premium Minimal Footer */}
       <Footer />
 
-      {/* Floating Action Buttons (Stacked: Instagram on top, WhatsApp on bottom, NO text per user request) */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+      {/* Floating Action Buttons */}
+      <aside aria-label="Quick Connect" className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
         {/* Instagram Floating Icon */}
         <a
           href="https://www.instagram.com/omr.a2z.events/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(225,48,108,0.35)] hover:scale-110 active:scale-95 transition-all duration-300"
-          aria-label="Follow OMR A2Z on Instagram"
+          aria-label="Follow OMR A2Z on Instagram @omr.a2z.events"
           title="Instagram @omr.a2z.events"
         >
           <InstagramIcon className="w-6 h-6" />
@@ -56,12 +55,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300"
-          aria-label="Direct WhatsApp Enquiry"
+          aria-label="Chat with OMR A2Z on WhatsApp (+91 90747 96765)"
           title="Chat on WhatsApp (+91 90747 96765)"
         >
           <WhatsAppIcon className="w-6 h-6 fill-current" />
         </a>
-      </div>
+      </aside>
     </div>
   )
 }

@@ -15,8 +15,8 @@ import {
   Users2,
   Layers,
   Award,
-  PhoneCall,
-  Clock,
+
+
   Wheat
 } from 'lucide-react'
 import { WhatsAppIcon } from './Icons'
@@ -337,7 +337,7 @@ export default function MenuSection() {
         {/* 6 Elite Dark-Themed Menu Category Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {menuCategories.map((cat, idx) => {
-            const IconComp = cat.icon
+
             return (
               <motion.div
                 key={cat.id}

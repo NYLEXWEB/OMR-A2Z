@@ -4,6 +4,8 @@ import React from 'react'
 import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
 import { InstagramIcon, WhatsAppIcon } from './Icons'
 
+const currentYear = 2026
+
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -187,7 +189,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p>
-            © {new Date().getFullYear()} OMR A2Z Wedding & Event Planners. All rights reserved.
+            © {currentYear} OMR A2Z Wedding & Event Planners. All rights reserved.
           </p>
 
           <button

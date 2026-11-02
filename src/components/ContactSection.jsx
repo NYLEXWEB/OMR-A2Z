@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Send, MessageCircle, Check, AlertCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, MessageCircle, Check, AlertCircle } from 'lucide-react'
 import { InstagramIcon, WhatsAppIcon } from './Icons'
 
 export default function ContactSection() {
@@ -53,7 +53,7 @@ export default function ContactSection() {
       newErrors.phone = 'Please provide your contact phone number.'
     } else {
       // Basic phone check (allowing 10 digits or with +91)
-      const cleanPhone = formData.phone.replace(/[\s\-\(\)]/g, '')
+      const cleanPhone = formData.phone.replace(/[\s\-()]/g, '')
       if (cleanPhone.length < 10) {
         newErrors.phone = 'Please enter a valid 10-digit mobile number.'
       }
@@ -79,7 +79,7 @@ export default function ContactSection() {
 💬 *Notes / Requests:*
 ${formData.message.trim() || 'No additional notes provided.'}
 ------------------------------
-_Sent via omra2z.com inquiry form_`
+_Sent via omr-a2z.in inquiry form_`
   }
 
   const handleSubmit = (e) => {

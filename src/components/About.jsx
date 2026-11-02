@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Play, Pause, Volume2, VolumeX, Sparkles, Film } from 'lucide-react'
+import { ArrowRight, Play, Pause, Volume2, VolumeX } from 'lucide-react'
 
 export default function About() {
   const videoRef = useRef(null)
@@ -154,6 +154,8 @@ export default function About() {
                   <video
                     ref={videoRef}
                     src="/video/4_5950933958932827180.mp4"
+                    title="OMR A2Z Wedding Celebrations and Stage Architecture Thalassery"
+                    aria-label="OMR A2Z Wedding Celebrations and Stage Architecture Thalassery"
                     autoPlay
                     loop
                     muted={isMuted}

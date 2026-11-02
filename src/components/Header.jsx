@@ -116,6 +116,7 @@ export default function Header() {
               className="p-2 text-[#22201E] hover:text-[#A52A32] hover:bg-[#FAF8F5] rounded-full transition-colors"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
+              suppressHydrationWarning
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

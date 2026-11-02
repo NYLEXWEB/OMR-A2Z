@@ -86,6 +86,7 @@ export default function WhyChooseUs() {
                   onClick={() => toggleItem(index)}
                   className="w-full py-6 sm:py-7 flex items-center justify-between gap-4 sm:gap-6 text-left cursor-pointer group"
                   aria-expanded={isOpen}
+                  suppressHydrationWarning
                 >
                   <div className="flex items-center gap-4 sm:gap-6 flex-grow pr-2">
                     <span className="text-xs sm:text-sm font-medium text-[#C6A46A] tracking-wider select-none flex-shrink-0">

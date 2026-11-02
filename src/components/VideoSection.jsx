@@ -8,16 +8,20 @@ import {
   Play,
   Pause,
   MoreHorizontal,
-  Bookmark,
-  Share2,
-  Music2,
-  Check,
-  Copy,
-  ExternalLink,
-  MessageCircle,
   X,
   Send,
+  ExternalLink,
   Sparkles
+
+
+
+
+
+
+
+
+
+
 } from 'lucide-react'
 import { InstagramIcon } from './Icons'
 

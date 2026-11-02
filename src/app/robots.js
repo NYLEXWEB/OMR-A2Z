@@ -4,8 +4,18 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/api/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
       },
     ],
-    sitemap: 'https://omra2z.com/sitemap.xml',
+    sitemap: 'https://www.omr-a2z.in/sitemap.xml',
+    host: 'https://www.omr-a2z.in',
   }
 }

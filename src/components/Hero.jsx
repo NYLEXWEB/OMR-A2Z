@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 
 export default function Hero() {
   const scrollToSection = (e, id) => {
@@ -28,7 +28,9 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-section.png"
-          alt="OMR A2Z Luxury White Theme Wedding Reception Hall"
+          alt="OMR A2Z Luxury Wedding Reception Hall Stage Decor Thalassery"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover object-[center_right] sm:object-center"
           fetchPriority="high"
           loading="eager"
@@ -58,6 +60,19 @@ export default function Hero() {
         <div className="max-w-2xl text-left">
 
 
+          {/* Entity Eyebrow for Brand & Local Search */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex items-center gap-2 mb-4"
+          >
+            <span className="w-6 h-[1px] bg-[#9C222A]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#9C222A]">
+              Wedding Planners & Catering · Thalassery, Kannur
+            </span>
+          </motion.div>
+
           {/* Apple-style Minimal Slim Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +91,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-sm sm:text-base md:text-lg text-[#59534B] font-light leading-relaxed max-w-xl mb-8"
           >
-            Bespoke wedding decor, authentic Thalassery feasts, and seamless event management tailored to your celebrations.
+            Premier wedding planning and authentic catering services in Thalassery and Kannur. Bespoke stage decoration, German pandhal marquees, and authentic Thalassery Dum Biryani feasts curated for unforgettable celebrations.
           </motion.p>
 
           {/* Primary & Secondary Call to Actions */}

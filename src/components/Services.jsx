@@ -8,8 +8,8 @@ import {
   Palette,
   Mic2,
   Sparkles,
-  Music,
-  CheckCircle2
+  Music
+
 } from 'lucide-react'
 import { WhatsAppIcon } from './Icons'
 
@@ -161,7 +161,7 @@ export default function Services() {
         {/* Scroll-Triggered Stacking Cards Deck */}
         <div className="relative pb-10">
           {services.map((service, index) => {
-            const IconComp = service.icon
+
             // Fluid responsive top offset that perfectly adapts from mobile to large screens
             const topOffsetFluid = `calc(clamp(4.2rem, 8vh, 5.2rem) + ${index * 14}px)`
 
